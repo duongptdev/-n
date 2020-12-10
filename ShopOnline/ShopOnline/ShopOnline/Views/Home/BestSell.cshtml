@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ShopOnline.Models.BestSellModel>
+<div class="f-grid py-2">
+    <h3 class="agileits-sear-head mb-3">Sản phẩm bán chạy</h3>
+    <div class="box-scroll">
+        <div class="scroll">
+            @foreach (var item in Model)
+            {
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-2 col-3 left-mar">
+                        <img src="@item.Image" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-9 col-sm-10 col-9 w3_mvd">
+                        <a href="@Url.Action("Details","Home",new { id=item.ID})">@item.NameProduct</a>
+                        <a href="@Url.Action("Details","Home",new { id=item.ID})" class="price-mar mt-2">@(string.Format("{0:#,##0}", item.Price))đ</a>
+                    </div>
+                </div>
+            }
+            </div>
+           
+        </div>
+    </div>
+            

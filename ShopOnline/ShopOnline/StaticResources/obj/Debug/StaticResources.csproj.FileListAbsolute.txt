@@ -1,0 +1,29 @@
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\bin\Debug\StaticResources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\bin\Debug\StaticResources.pdb
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\bin\Debug\en\StaticResources.resources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.Resources.resources
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.Cache
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\en\StaticResources.resources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.pdb
+G:\StaticResources\bin\Debug\StaticResources.dll
+G:\StaticResources\bin\Debug\StaticResources.pdb
+G:\StaticResources\bin\Debug\en\StaticResources.resources.dll
+G:\StaticResources\obj\Debug\StaticResources.csprojResolveAssemblyReference.cache
+G:\StaticResources\obj\Debug\StaticResources.Resources.resources
+G:\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+G:\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.Cache
+G:\StaticResources\obj\Debug\en\StaticResources.resources.dll
+G:\StaticResources\obj\Debug\StaticResources.dll
+G:\StaticResources\obj\Debug\StaticResources.pdb
+D:\DATN\ShopOnline\ShopOnline\StaticResources\bin\Debug\StaticResources.dll
+D:\DATN\ShopOnline\ShopOnline\StaticResources\bin\Debug\StaticResources.pdb
+D:\DATN\ShopOnline\ShopOnline\StaticResources\bin\Debug\en\StaticResources.resources.dll
+D:\DATN\ShopOnline\ShopOnline\StaticResources\obj\Debug\StaticResources.csprojResolveAssemblyReference.cache
+D:\DATN\ShopOnline\ShopOnline\StaticResources\obj\Debug\StaticResources.Resources.resources
+D:\DATN\ShopOnline\ShopOnline\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+D:\DATN\ShopOnline\ShopOnline\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.Cache
+D:\DATN\ShopOnline\ShopOnline\StaticResources\obj\Debug\en\StaticResources.resources.dll
+D:\DATN\ShopOnline\ShopOnline\StaticResources\obj\Debug\StaticResources.dll
+D:\DATN\ShopOnline\ShopOnline\StaticResources\obj\Debug\StaticResources.pdb

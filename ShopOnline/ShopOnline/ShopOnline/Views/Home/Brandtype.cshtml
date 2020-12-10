@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Model.EF.Brand>
+
+@foreach (var item in Model)
+{
+    <li><a href="@Url.Action("BrandbyType","Home",new { id=item.ID})">@item.Name</a></li>
+
+}

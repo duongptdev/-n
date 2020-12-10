@@ -1,0 +1,509 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Electro Store Ecommerce Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link href="~/Assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/client/css/PagedList.css" rel="stylesheet" />
+    <!-- Bootstrap css -->
+    <link href="~/Assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/Assets/css/fontawesome-all.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <link href="~/Assets/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- pop-up-box -->
+    <link href="~/Assets/css/menu.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- menu style -->
+    <!-- //Custom-Files -->
+    <!-- web fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <!-- //web fonts -->
+
+</head>
+
+<body>
+    <!-- top-header -->
+    <div class="agile-main-top">
+        @Html.Action("TopMenu", "Home")
+    </div>
+
+    <!-- header-bottom-->
+    <div class="header-bot">
+        <div class="container">
+            <div class="row header-bot_inner_wthreeinfo_header_mid">
+                <!-- logo -->
+                <div class="col-md-3 logo_agile">
+                    <h1 class="text-center">
+                        <a href="/" class="font-weight-bold font-italic">
+                            <img src="~/Assets/images/logo2.png" alt="" class="img-fluid">Watch Store
+                        </a>
+                    </h1>
+                </div>
+                <!-- //logo -->
+                <!-- header-bot -->
+                <div class="col-md-9 header mt-4 mb-md-0 mb-4">
+                    <div class="row">
+                        <!-- search -->
+                        <div class="col-10 agileits_search">
+                            <form class="form-inline" action="/tim-kiem" method="get">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" id="txtKeyword" name="keyword">
+                                <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
+                       
+                        <!-- //search -->
+                        <!-- cart details -->
+                        <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
+                            <div class="wthreecartaits wthreecartaits2 cart cart box_1 last">
+                                    <input type="hidden" name="cmd" value="_cart">
+                                    <input type="hidden" name="display" value="1">
+                                    <a class="btn btn-dark w3view-cart" href="@Url.Action("Index", "Cart")">
+                                        <i class="fas fa-cart-arrow-down"></i>
+                                    </a>
+                            </div>
+                        </div>
+                        <!-- //cart details -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- shop locator (popup) -->
+    <!-- //header-bottom -->
+    <!-- navigation -->
+    <div class="navbar-inner">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-center mr-xl-5">
+                        @Html.Action("Menu", "Home")
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- //navigation -->
+    <!-- banner -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <!-- Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item item1 active">
+                <div class="container">
+                    <div class="w3l-space-banner">
+                        <div class="carousel-caption p-lg-5 p-sm-4 p-3">
+                            <p>
+                                Get flat
+                                <span>10%</span> Cashback
+                            </p>
+                            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
+                                The
+                                <span>Big</span>
+                                Sale
+                            </h3>
+                            <a class="button2" href="/">Shop Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item item2">
+                <div class="container">
+                    <div class="w3l-space-banner">
+                        <div class="carousel-caption p-lg-5 p-sm-4 p-3">
+                            <p>
+                                advanced
+                                <span>Wireless</span> earbuds
+                            </p>
+                            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
+                                Best
+                                <span>Headphone</span>
+                            </h3>
+                            <a class="button2" href="/">Shop Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item item3">
+                <div class="container">
+                    <div class="w3l-space-banner">
+                        <div class="carousel-caption p-lg-5 p-sm-4 p-3">
+                            <p>
+                                Get flat
+                                <span>10%</span> Cashback
+                            </p>
+                            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
+                                New
+                                <span>Standard</span>
+                            </h3>
+                            <a class="button2" href="/">Shop Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item item4">
+                <div class="container">
+                    <div class="w3l-space-banner">
+                        <div class="carousel-caption p-lg-5 p-sm-4 p-3">
+                            <p>
+                                Get Now
+                                <span>40%</span> Discount
+                            </p>
+                            <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
+                                Today
+                                <span>Discount</span>
+                            </h3>
+                            <a class="button2" href="/">Shop Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- //banner -->
+    <!-- top Products -->
+    <div class="zalo-chat-widget" data-oaid="306607809929499208" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+
+    <div class="ads-grid py-sm-5 py-4">
+        @RenderBody()
+    </div>
+    <!-- //top products -->
+    <!-- middle section -->
+    <div class="join-w3l1 py-sm-5 py-4">
+        <div class="container py-xl-4 py-lg-2">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="join-agile text-left p-4">
+                        <div class="row">
+                            <div class="col-sm-7 offer-name">
+                                <h6>Smooth, Rich & Loud Audio</h6>
+                                <h4 class="mt-2 mb-3">Branded Headphones</h4>
+                                <p>Sale up to 25% off all in store</p>
+                            </div>
+                            <div class="col-sm-5 offerimg-w3l">
+                                <img src="~/Assets/images/dongho2.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="join-agile text-left p-4">
+                        <div class="row ">
+                            <div class="col-sm-7 offer-name">
+                                <h6>A Bigger Phone</h6>
+                                <h4 class="mt-2 mb-3">Smart Phones 5</h4>
+                                <p>Free shipping order over $100</p>
+                            </div>
+                            <div class="col-sm-5 offerimg-w3l">
+                                <img src="~/Assets/images/dongho3.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- middle section -->
+    <!-- footer -->
+    <footer>
+        <div class="footer-top-first">
+            <div class="container py-md-5 py-sm-4 py-3">
+                <!-- footer first section -->
+                <h2 class="footer-top-head-w3l font-weight-bold mb-2">Electronics :</h2>
+                <p class="footer-main mb-4">
+                    If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we make it easy to
+                    find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops, cell phones, tablets
+                    and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.
+                </p>
+                <!-- //footer first section -->
+                <!-- footer second section -->
+                <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
+                    <div class="col-md-4 offer-footer">
+                        <div class="row">
+                            <div class="col-4 icon-fot">
+                                <i class="fas fa-dolly"></i>
+                            </div>
+                            <div class="col-8 text-form-footer">
+                                <h3>Free Shipping</h3>
+                                <p>on orders over $100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offer-footer my-md-0 my-4">
+                        <div class="row">
+                            <div class="col-4 icon-fot">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="col-8 text-form-footer">
+                                <h3>Fast Delivery</h3>
+                                <p>World Wide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offer-footer">
+                        <div class="row">
+                            <div class="col-4 icon-fot">
+                                <i class="far fa-thumbs-up"></i>
+                            </div>
+                            <div class="col-8 text-form-footer">
+                                <h3>Big Choice</h3>
+                                <p>of Products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //footer second section -->
+            </div>
+        </div>
+        <!-- footer third section -->
+        <div class="w3l-middlefooter-sec">
+            <div class="container py-md-5 py-sm-4 py-3">
+                <div class="row footer-info w3-agileits-info">
+                    <!-- footer categories -->
+                    <!-- //footer categories -->
+                    <!-- quick links -->
+                    <div class="col-md-4 col-sm-6 footer-grids mt-sm-0 mt-4">
+                        <h3 class="text-white font-weight-bold mb-3">Quick Links</h3>
+                        <ul>
+                            <li class="mb-3">
+                                <a href="/">Trang chủ</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="lien-he">Liên hệ</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="tin-tuc">Tin tức</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="Accsesories">Đồng hồ nam</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="RiddingGear">Đồng hồ nữ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-6 footer-grids mt-md-0 mt-4">
+                        <h3 class="text-white font-weight-bold mb-3">Get in Touch</h3>
+                        <ul>
+                            <li class="mb-3">
+                                <i class="fas fa-map-marker"></i> 16 Văn Hội
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-phone"></i> +84 378 202 865
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope-open"></i>
+                                <a href="phamduongcntt60@mail.com">phamduongcntt60@mail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
+                        <!-- newsletter -->
+                        <h3 class="text-white font-weight-bold mb-3">Newsletter</h3>
+                        <p class="mb-3">Free Delivery on your first order!</p>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email" name="email" required="">
+                                <input type="submit" value="Go">
+                            </div>
+                        </form>
+                        <!-- //newsletter -->
+                        <!-- social icons -->
+                        <div class="footer-grids  w3l-socialmk mt-3">
+                            <h3 class="text-white font-weight-bold mb-3">Follow Us on</h3>
+                            <div class="social">
+                                <ul>
+                                    <li>
+                                        <a class="icon fb" href="#">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon tw" href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon gp" href="#">
+                                            <i class="fab fa-google-plus-g"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //social icons -->
+                    </div>
+                </div>
+                <!-- //quick links -->
+            </div>
+        </div>
+        <!-- //footer third section -->
+ 
+    </footer>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="copy-right py-3">
+        <div class="container">
+            <p class="text-center text-white">
+                © 2018 Electro Store. All rights reserved | Design by
+                <a href="http://w3layouts.com"> W3layouts.</a>
+            </p>
+        </div>
+    </div>
+    <!-- //copyright -->
+    <!-- js-files -->
+    <!-- jquery -->
+    <script src="~/Assets/js/jquery-2.2.3.min.js"></script>
+    <!-- //jquery -->
+    <!-- nav smooth scroll -->
+    <script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+    </script>
+    <!-- //nav smooth scroll -->
+    <!-- popup modal (for location)-->
+    <script src="~/Assets/js/jquery.magnific-popup.js"></script>
+    <script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+    </script>
+    <!-- //popup modal (for location)-->
+    <!-- cart-js -->
+    <script src="~/Assets/js/minicart.js"></script>
+    <script>
+		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+
+		paypals.minicarts.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
+
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
+
+			if (total < 3) {
+				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
+    </script>
+    <!-- //cart-js -->
+    <!-- password-script -->
+    <!-- //password-script -->
+    <!-- scroll seller -->
+    <script src="~/Assets/js/scroll.js"></script>
+    <!-- //scroll seller -->
+    <!-- smoothscroll -->
+    <script src="~/Assets/js/SmoothScroll.min.js"></script>
+    <!-- //smoothscroll -->
+    <!-- start-smooth-scrolling -->
+    <script src="~/Assets/js/move-top.js"></script>
+    <script src="~/Assets/js/easing.js"></script>
+    <script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- for bootstrap working -->
+    <script src="~/Assets/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- //js-files -->
+    <script src="~/Assets/client/js/baseController.js"></script>
+    @RenderSection("jsFooter", required: false)
+    @RenderSection("jscollapse", required: false)
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+</body>
+
+</html>

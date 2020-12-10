@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<Model.EF.Product>
+<div class="container">
+    <div class="product-one">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 product-left p-left">
+                <div class="product-main simpleCart_shelfItem">
+                    <a href="@Url.Action("Details","Home",new { id=item.ID})">
+                        <div class="cake_img">
+
+                            <img class="img-responsive zoom-img" style="width:250px;height:300px;" src="@item.Image" alt="" />
+                        </div>
+                    </a>    
+                    <div class="product-bottom">
+                        <h3 class="text-center">@(ShopOnline.Controllers.HomeController.getString(item.Name))</h3>
+                        <p class="text-center">@item.MetaTitle</p>
+                        <h4 class="text-center"> <span class="item_price ">@(string.Format("{0:#,##0}", item.Price))đ</span></h4>
+                        <h3 class="text-center"><a class="btn btn-success btn-sm " href="@Url.Action("ThemVaoGio", "Cart", new { sanPhamID = item.ID })"> <span class="glyphicon glyphicon-shopping-cart"></span>  Thêm vào giỏ </a></h3>
+                    </div>
+                  
+                </div>
+            </div>
+        }
+        <div class="clearfix"></div>
+    </div>
+</div>

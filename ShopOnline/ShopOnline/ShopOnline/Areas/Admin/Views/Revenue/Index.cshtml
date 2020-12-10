@@ -1,0 +1,79 @@
+﻿@using ShopOnline.Areas.Admin.Models
+@model IEnumerable<ReportInfo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section jsRevenue{
+    <script>
+        $(document).ready(function () {
+            $('#table_id').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
+}
+@{
+    ViewBag.Title = "Index";
+}
+@*@section jsFooter{
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Loai', 'Doanh so'],
+              @foreach (var r in Model)
+          {
+              <text>["@r.Group", @r.Sum],</text>
+          }
+            ]);
+
+            var options = {
+                title: 'Doanh số bán hàng',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+
+}*@
+<h2>Revenue</h2>
+<table class="table table-bordered" id="table_id">
+    <thead>
+        <tr>
+            <th>Thống kê</th>
+            <th>Số lượng</th>
+            <th>Doanh thu</th>
+            <th>Sản phẩm rẻ nhất</th>
+            <th>Sản phẩm đắt nhất</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var r in Model)
+        {
+            <tr>
+
+                <td>@r.iGroup</td>
+                <td>@r.Count</td>
+                <td>@Html.FormatValue(r.Sum, "{0:c}")</td>
+                <td>@Html.FormatValue(r.Min, "{0:c}")</td>
+                <td>@Html.FormatValue(r.Max, "{0:c}")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+
+

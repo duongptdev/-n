@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Model.EF.Banner>
+<div class="index-banner">
+    @foreach (var item in Model)
+    {
+
+        <div class="wmuSlider example1" style="height: 560px;">
+            <div class="wmuSliderWrapper">
+                <article style="position: relative; width: 100%; opacity: 1;">
+                    <div class="banner-wrap">
+                        <div class="slider-left">
+                            <img src="~/img/Item/@item.Picture" alt="" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </article>
+            </div>
+            <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a>
+            <ul class="wmuSliderPagination">
+                <li><a href="#" class="">0</a></li>
+                <li><a href="#" class="">1</a></li>
+                <li><a href="#" class="wmuActive">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+            <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a><ul class="wmuSliderPagination"><li><a href="#" class="wmuActive">0</a></li><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="">4</a></li></ul>
+        </div>
+  
+
+    }
+</div>

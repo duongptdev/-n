@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Assets/admin/js/chart.js/Chart.js"></script>
+
+@{
+    string[] arrayList = new string[12];
+    arrayList = (string[])ViewBag.dateX;
+    string[] dt = new string[12];
+    dt = (string[])ViewBag.data;
+    string name = "Tổng thu nhập";
+}
+@* hiện biểu đồ*@
+<canvas id="myChart" width="100" height="100"></canvas>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["@arrayList[0]/2020","@arrayList[1]/2020","@arrayList[2]/2020","@arrayList[3]/2020","@arrayList[4]/2020","@arrayList[5]/2020","@arrayList[6]/2020","@arrayList[7]/2020","@arrayList[8]/2020","@arrayList[9]/2020","@arrayList[10]/2020","@arrayList[11]/2020"],
+            datasets: [{
+                label: '@name',
+                data: [@dt[0],@dt[1],@dt[2],@dt[3],@dt[4],@dt[5],@dt[6],@dt[7],@dt[8],@dt[9],@dt[10],@dt[11]],
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+
+                ],
+                borderColor: [
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 159, 64, 1)'
+
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>

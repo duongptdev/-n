@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "BlogDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="main_blog_area p_100">
+    <div class="container">
+        <div class="row blog_area_inner">
+
+                <div class="main_blog_inner single_blog_inner">
+
+                    <div class="blog_item">
+                        <div class="blog_img">
+                            <img class="img-fluid" width="840" height="360" src="~/img/Item/@Model.Image" alt="">
+                        </div>
+                        <div class="blog_text">
+                            <div class="blog_time">
+                                <div class="float-left">
+                                    <a href="#">@Model.CreatedDate</a>
+                                </div>
+                            </div>
+                            <a href="#"><h4>@Model.Title</h4></a>
+                            <p>@Model.ShortTitle</p>
+                        </div>
+                    </div>
+
+                    <div class="single_element_text">
+                        <p>@Model.Description</p>
+                    </div>              
+                </div>
+ 
+
+        </div>
+    </div>
+</section>

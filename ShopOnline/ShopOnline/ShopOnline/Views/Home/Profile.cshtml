@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Model.EF.User>
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Profile</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12"></div>
+        @foreach (var item in Model)
+        {
+
+
+            <table class="table">
+                <tr>
+                    <th> NAME</th>
+                    <td> @item.Name</td>
+                </tr>
+                <tr>
+                    <th>  ADDRESS</th>
+                    <td>     @item.Address</td>
+
+                </tr>
+                <tr>
+                    <th>    PHONE NUMBER</th>
+                    <td>      @item.Phone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <a href="@Url.Action("Changepassword","User")" class="btn btn-success">Changepassword</a>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>}
+    </div>
+</div>
+
+

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Model.EF.Product>
+<section class="similar_product_area p_100">
+    <div class="container">
+
+        <div class="main_title text-center">
+            <h2>Similar Products</h2>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 product  ">
+                <div class="product-main simpleCart_shelfItem">
+                    <a href="@Url.Action("Details","Home",new { id=item.ID})">
+                        <div class="cake_img">
+
+                            <img class="img-responsive zoom-img" style="width:150px;height:200px;" src="@item.Image" alt="" />
+                        </div>
+                    </a>
+                    <div class="product-bottom">
+                        <h4 >@(ShopOnline.Controllers.HomeController.getString(item.Name))</h4>
+                        <p >@item.MetaTitle</p>
+                        <h4 > <span class="item_price ">@(string.Format("{0:#,##0}", item.Price))đ</span></h4>
+                        <del>@(string.Format("{0:#,##0}", ((item.Price * 100) / 10)))đ</del>
+                        <h3 ><a class="btn btn-success btn-sm " href="@Url.Action("ThemVaoGio", "Cart", new { sanPhamID = item.ID })"> <span class="glyphicon glyphicon-shopping-cart"></span>  Thêm vào giỏ </a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        }
+
+
+
+    </div>
+</section>

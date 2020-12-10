@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Model.EF.Menu>
+@using Model.EF;
+@foreach (var item in Model)
+            {
+
+    <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+        <a class="nav-link " href="@item.Link" role="button" >
+            @item.Text
+        </a>
+        @*<div class="dropdown-menu">
+            @Html.Action("ItemMenuType", "Home", new { id = item.ID })
+            @Html.Action("Brandtype", "Home", new { id = item.ID })
+        </div>*@
+    </li>
+}
+
+
+

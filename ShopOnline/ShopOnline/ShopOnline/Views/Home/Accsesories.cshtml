@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ShopOnline.Models.Helmets>
+@{
+    ViewBag.Title = "Accsesories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3 class="heading-tittle text-center font-italic">Đồng hồ nam</h3>
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4 product-men mt-5">
+            <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item text-center">
+                    <img src="@product.Image" style="width:200px;height:250px;" alt="">
+                    <div class="men-cart-pro">
+                        <div class="inner-men-cart-pro">
+                            <a href="@Url.Action("Details","Home",new { id=product.ID})" class="link-product-add-cart">Quick View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-info-product text-center border-top mt-4">
+                    <h4 class="pt-1">
+                        <a href="@Url.Action("Details","Home",new { id=product.ID})">@(ShopOnline.Controllers.HomeController.getString(product.Name))</a>
+                    </h4>
+                    <div class="info-product-price my-2">
+                        <span class="item_price">@(string.Format("{0:#,##0}", product.Price))đ</span>
+                        <del>@(string.Format("{0:#,##0}", ((product.Price * 100) / 10)))đ</del>
+                    </div>
+                    <h3 class="text-center"><a class="btn btn-success btn-sm item_add item_1" href="@Url.Action("ThemVaoGio", "Cart", new { sanPhamID = product.ID })"> <i class="fa fa-shopping-cart"></i>  Thêm vào giỏ </a></h3>
+                </div>
+            </div>
+        </div>
+    }
+</div>

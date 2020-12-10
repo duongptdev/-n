@@ -1,0 +1,138 @@
+﻿@model Model.EF.Product
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var relatedProducts = (List<Model.EF.Product>)ViewBag.RelatedProducts;
+}
+<div class="banner-bootom-w3-agileits py-5">
+    <div class="container py-xl-4 py-lg-2">
+        <!-- tittle heading -->
+        <!-- //tittle heading -->
+        <div class="row">
+            <div class="col-lg-5 col-md-8 single-right-left ">
+                <div class="grid images_3_of_2">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li data-thumb="images/sii1.jpg">
+                                <div class="thumb-image">
+                                    <img style="width:250px;height:300px;" src="@Model.Image" data-imagezoom="true" class="img-fluid" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 single-right-left simpleCart_shelfItem">
+                <h3 class="mb-3">@(ShopOnline.Controllers.HomeController.getString(Model.Name))</h3>
+                <p class="mb-3">
+                    <span class="item_price">@(string.Format("{0:#,##0}", Model.Price))đ</span>
+                    <del>@(string.Format("{0:#,##0}", ((Model.Price * 100) / 10)))đ</del>
+                    <label>Free delivery</label>
+                </p>
+                <div class="single-infoagile">
+                    <ul>
+                        <li class="mb-3">
+                            Cash on Delivery Eligible.
+                        </li>
+                        <li class="mb-3">
+                            Shipping Speed to Delivery.
+                        </li>
+                        <li class="mb-3">
+                            EMI starts at $958.
+                        </li>
+                        <li class="mb-3">
+                            3 offers from
+                            <span class="item_price">$220.00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-single-w3l">
+                    <p class="my-3">
+                        <i class="far fa-hand-point-right mr-2"></i>
+                        Free standard installation within
+                        <label>48 hours</label> of delivery
+                    </p>
+                    <ul>
+                        <li class="mb-1">
+                            Frost Free Double Door: Auto defrost to stop ice-build up
+                        </li>
+                        <li class="mb-1">
+                            Capacity 260 L: Suitable for families with 2 to 3 members
+                        </li>
+                        <li class="mb-1">
+                            Energy Rating: 3 Star
+                        </li>
+                        <li class="mb-1">
+                            Warranty: 1 year warranty on product and 10 years warranty on compressor
+                        </li>
+                        <li class="mb-1">
+                            Shelf Type: Toughened Glass to withstand the weight of heaviest vessels
+                        </li>
+                        <li class="mb-1">
+                            Inverter Compressor: Energy efficient, less noise & more durable
+                        </li>
+                        <li class="mb-1">
+                            Also included in the box: User manual, Warranty card
+                        </li>
+                    </ul>
+                    <p class="my-sm-4 my-3">
+                        <i class="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
+                    </p>
+                </div>
+                <div class="occasion-cart">
+                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                        <form action="#" method="post">
+                            <fieldset>
+                                <input type="hidden" name="cmd" value="_cart" />
+                                <input type="hidden" name="add" value="1" />
+                                <input type="hidden" name="business" value=" " />
+                                <input type="hidden" name="item_name" value="Double-Door Refrigerator" />
+                                <input type="hidden" name="amount" value="220.00" />
+                                <input type="hidden" name="discount_amount" value="1.00" />
+                                <input type="hidden" name="currency_code" value="USD" />
+                                <input type="hidden" name="return" value=" " />
+                                <input type="hidden" name="cancel_return" value=" " />
+                               <a class="btn btn-success btn-sm " href="@Url.Action("ThemVaoGio", "Cart", new { sanPhamID = Model.ID })"> <i class="fa fa-shopping-cart"></i>  Thêm vào giỏ </a>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<h3 class="heading-tittle text-center font-italic">Sản phẩm liên quan</h3>
+<div class="row">
+  
+    @foreach (var product in relatedProducts)
+    {  
+        <div class="col-md-4 product-men mt-5">
+            <div class="men-pro-item simpleCart_shelfItem">
+                <div class="men-thumb-item text-center">
+                    <img src="@product.Image" style="width:100px;height:150px;" alt="">
+                    <div class="men-cart-pro">
+                        <div class="inner-men-cart-pro">
+                            <a href="@Url.Action("Details","Home",new { id=product.ID})" class="link-product-add-cart">Quick View</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item-info-product text-center border-top mt-4">
+                    <h4 class="pt-1">
+                        <a href="@Url.Action("Details","Home",new { id=product.ID})">@(ShopOnline.Controllers.HomeController.getString(product.Name))</a>
+                    </h4>
+                    <div class="info-product-price my-2">
+                        <span class="item_price">@(string.Format("{0:#,##0}", product.Price))đ</span>
+                        <del>@(string.Format("{0:#,##0}", ((product.Price * 100) / 10)))đ</del>
+                    </div>
+                    <h3 class="text-center"><a class="btn btn-success btn-sm item_add item_1" href="@Url.Action("ThemVaoGio", "Cart", new { sanPhamID = product.ID })"> <i class="fa fa-shopping-cart"></i>  Thêm vào giỏ </a></h3>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+	<!-- Single Page -->

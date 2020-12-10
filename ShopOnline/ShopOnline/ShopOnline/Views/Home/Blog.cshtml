@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<Model.EF.Content>
+
+<section class="main_blog_area p_100">
+    <div class="container">
+        <div class="row blog_area_inner">
+
+                @foreach (var item in Model)
+                {
+                    <div class="main_blog_inner">
+                        <div class="blog_item">
+                            <div class="blog_img">
+                                <img class="img-fluid" width="840" height="360" src="~/img/Item/@item.Image" alt="">
+                            </div>
+                            <div class="blog_text">
+                                <div class="blog_time">
+                                    <div class="float-left">
+                                        <a href="#">@item.CreatedDate</a>
+                                    </div>
+                                    <div class="float-right">
+                                        <ul class="list_style">
+                                            <li><a href="#">By :  Admin</a></li>
+                                            <li><a href="#">bekery, sweet</a></li>
+                                            <li><a href="#">Comments: 8</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="#"><h4>@item.Title</h4></a>
+                                <p>@item.ShortTitle</p>
+                                <a class="pink_more" href="@Url.Action("BlogDetail","Home",new {id=item.ID})">Read more</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                }
+
+
+        </div>
+    </div>
+</section>
+
+

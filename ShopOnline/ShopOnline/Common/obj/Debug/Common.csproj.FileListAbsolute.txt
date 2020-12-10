@@ -1,0 +1,9 @@
+D:\DATN\ShopOnline\ShopOnline\Common\bin\Debug\Common.dll
+D:\DATN\ShopOnline\ShopOnline\Common\bin\Debug\Common.pdb
+D:\DATN\ShopOnline\ShopOnline\Common\obj\Debug\Common.dll
+D:\DATN\ShopOnline\ShopOnline\Common\obj\Debug\Common.pdb
+D:\DATN\ShopOnline\ShopOnline\Common\bin\Debug\Newtonsoft.Json.dll
+D:\DATN\ShopOnline\ShopOnline\Common\bin\Debug\Newtonsoft.Json.xml
+D:\DATN\ShopOnline\ShopOnline\Common\obj\Debug\Common.csprojAssemblyReference.cache
+D:\DATN\ShopOnline\ShopOnline\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\DATN\ShopOnline\ShopOnline\Common\obj\Debug\Common.csproj.CopyComplete

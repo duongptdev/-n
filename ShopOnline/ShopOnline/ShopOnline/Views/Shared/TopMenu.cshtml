@@ -1,0 +1,102 @@
+﻿@model List<Model.EF.Menu>
+@using Model.EF;
+@{
+
+    User acc = (User)Session[ShopOnline.Common.CommonConstants.USER_SESSION];
+    string username = "";
+    if (Request.Cookies[ShopOnline.Common.CommonConstants.USER_SESSION] != null)
+    {
+        username = Request.Cookies[ShopOnline.Common.CommonConstants.USER_SESSION].Value;
+
+    }
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*@
+</head>
+<body>
+    @if (Session[ShopOnline.Common.CommonConstants.USER_SESSION] == null)
+            {
+        <div class="container-fluid">
+            <div class="row main-top-w3l py-2">
+                <div class="col-lg-3 header-most-top">
+                    <p class="text-white text-lg-left text-center">
+                        Offer Zone Top Deals & Discounts
+                        <i class="fas fa-shopping-cart ml-1"></i>
+                    </p>
+                </div>
+                <div class="col-lg-9 header-right mt-lg-0 mt-2">
+                    <!-- header lists -->
+                    <ul>
+                        <li class="text-center border-right text-white">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
+                                <i class="fas fa-truck mr-2"></i>Nationwide Shipping
+                            </a>
+                        </li>
+                        <li class="text-center border-right text-white">
+                            <i class="fas fa-phone mr-2"></i> 0378 202 865
+                        </li>
+                        <li class="text-center border-right text-white">
+                            <a href="@Url.Action("Login","User")" class="text-white">
+                                <i class="fas fa-sign-in-alt mr-2"></i> Log In
+                            </a>
+                        </li>
+                        <li class="text-center text-white">
+                            <a href="@Url.Action("Register","User")" class="text-white">
+                                <i class="fas fa-sign-out-alt mr-2"></i>Register
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- //header lists -->
+                </div>
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div class="container-fluid">
+            <div class="row main-top-w3l py-2">
+                <div class="col-lg-4 header-most-top">
+                  
+                </div>
+                <div class="col-lg-8 header-right mt-lg-0 mt-2">
+                    <!-- header lists -->
+                    <ul>
+                        <li class="text-center border-right text-white">
+                            <a href="@Url.Action("Profile","Home")"  class="text-white">
+                                <i class="fa fa-user mr-2"></i>Profile
+                            </a>
+                        </li>
+                        <li class="text-center border-right text-white">
+                            <a href="@Url.Action("ListOrderClient","Home")" class="text-white">
+                                <i class="fa fa-truck mr-2"></i>Order
+                            </a>
+                        </li>
+                        <li class="text-center border-right text-white">
+                            <a href="@Url.Action("Changepassword","User")" class="text-white">
+                                <i class="fa fa-key mr-2" aria-hidden="true"></i>Change password
+                            </a>
+                        </li>
+                        <li class="btn text-white"> Xin chào : @acc.UserName</li>
+                        <li class="text-center text-white">
+                            <a href="@Url.Action("Logout","User")" class="text-white">
+                                <i class="fa fa-sign-out-alt mr-2"></i>Logout
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- //header lists -->
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+</body>
+</html>
